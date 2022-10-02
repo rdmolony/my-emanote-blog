@@ -1,45 +1,11 @@
-# emanote-template
+# Rowan Molony's blog
 
-A template repository to create your own Markdown-based [Emanote](https://github.com/srid/emanote) notebook with [Visual Studio Code](https://code.visualstudio.com/) support, as well as to publish it to GitHub Pages.
+I'm currently working as a software engineer at [`Mainstream Renewable Power`](https://www.mainstreamrp.com/) where I do web development & data engineering.
 
-See https://emanote.srid.ca/resources/emanote-template for details.
+We use the [`Django`](https://www.djangoproject.com/) web framework internally for an app called `StationManager`.  This is our portal to sensor measurements (wind speed, temperature etc) from sites all over the world, which are used to decide what renewables (wind or solar and/or energy storage) could be built & where they should go. 
 
-## Using this template
+I'm written down here a few things I've picked up along the way.
 
-Click the "Use this template" green button on Github, and in the resulting repository make the following modifications,
+> Inspired by [simonw/til](https://github.com/simonw/til)
 
-1. Change `content/index.yaml` to use your site's title (and set the same in `content/index.md`) and a suitable edit URL.
-1. Start adding notes to `./content` (where all notes should live).
-
-If deploying using GitHub Pages, also:
-
-1. Change `flake.nix` to set the `baseUrl` (if your repository is named differently or you are using a CNAME).
-
-Checkout [examples](https://emanote.srid.ca/examples) and [demo](https://emanote.srid.ca/demo) for next steps.
-
-## Running using Nix
-
-To start the Emanote live server using Nix:
-
-```sh
-# If you using VSCode, you can also: Ctrl+Shift+B
-nix run
-```
-
-To update Emanote version in flake.nix:
-
-```sh
-nix flake lock --update-input emanote
-```
-
-To build the static website via Nix:
-
-```sh
-nix build -o ./result
-# Then test it:
-nix run nixpkgs#nodePackages.live-server -- ./result
-```
-
-## GitHub Pages
-
-GitHub Actions CI is responsible for deploying to GitHub Pages. See `.github/workflows/publish.yaml`.
+> Built on [Emanote](https://github.com/srid/emanote)
